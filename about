@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body> 
+	<h1>about me</h1>
+<style>
+h1 {color:gray;
+	font-family:"sans-serif", verdana;
+	font-size: 36 px;
+	text-align: center;
+}
+p {color: gray;
+	font-family: "sans-serif", verdana;
+	font-size: 14 px;
+	text-align: center;
+}
+</style>
+
+	<p> Hello! I'm Claire and I like all things art and quirky. I like to be myself at all times, all day, everywhere.</p>
+
+	<img src ="images/FullSizeRender.jpeg" alt=meme width="300" height="300">
+	<img><a href="Cure">About This Project</a>
+
+</body>
+</html>
