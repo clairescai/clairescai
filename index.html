@@ -2,51 +2,54 @@
 <html>
 <body>
 <style>
-ul {
-	list-style-type:none;
-	font-family: "sans-serif", verdana;
+
+.topnav {
+  overflow: hidden;
+  margin-top: -80px;
 }
 
-li {margin-bottom: 10px;
+.topnav a {
+  float: right;
+  color: black;
+  padding-top:0px;
+  padding-right:40px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family:"sans-serif",verdana;
 }
 
-a {color:gray;
-	font-family: "sans-serif", verdana;
-	}
-
-h1 {color:skyblue;
-	font-size: 36px;
-	text-align:center;
-	font-family: "sans-serif", verdana;
-} 
-
-p {color:gray;
-	font-size: 14px;
-	text-align:center;
-	font-family: "sans-serif", verdana;
-} 
-
-a:link {
-	text-decoration: none;
+.topnav a:hover {
+  color: pink;
+  text-decoration: bold;
+  font-family:"sans-serif", verdana;
 }
 
-a:hover {
-	font-weight: bolder; 
-	background-color: lavender;
-	background-image: 
+.topnav a.active {
+  color:skyblue;
+  font-size:20px;
+  text-decoration: bold;
+  font-family:"sans-serif", verdana;
 }
 
+i {color:blue;
+	font-size:30px;
+}
 </style>
 
-	<h1>claire cai creates some stuff</h1>
-	<p>I am a sophomore at Northwestern University yuhyeet.</p>
-		<ul style="text-align:center">
-			<li><a href="about.html" target="_self">about</a></li>
-			<li><a href="github/projects">projects</a></li>
-			<li><a href="/experience">experience</a></li>
-			<li><a href="/artwork">artwork</a></li>
-		</ul>
-	</nav>
+<a href="index.html">
+ <img src="images/logo-01.png" alt=logo width="140" height="120" class="logo" />
+</a>
+
+<div class="topnav">
+  <a href="contact.html">contact</a>
+  <a href="artwork.html">artwork</a>
+  <a href="projects.html">projects</a>
+  <a href="experience.html">experience</a>
+  <a href="about.html">about</a>
+
+</div>
+
+
 
 </body>
 </html>		
