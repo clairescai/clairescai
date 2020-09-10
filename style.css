@@ -1,8 +1,11 @@
-body {
-  overflow-x:hidden;
-  max-width: 100%;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
-
 
 
 .topnav {
@@ -39,14 +42,26 @@ a.active {
   font-family:'Quicksand', sans-serif;
 }
 
+.topnav .icon {
+  display: none;
+}
+
 .intro {
-  margin-left:25%;
-  margin-right:25%;
+  margin-left:10%;
+  margin-right:10%;
   text-align:left;
-  margin-top:20%;
+  margin-top:30%;
   margin-bottom:15%;
 }
 
+.intro2 {
+  margin-left:10%;
+  margin-right:10%;
+  text-align:left;
+  margin-top:5%;
+  margin-bottom:15%;
+  color:black;
+}
 
 }
 .about {
@@ -58,8 +73,6 @@ a.active {
 }
 
 .outro {
-  margin-left:25%;
-  margin-right:25%;
   text-align:center;
   margin-bottom:8%;
 }
@@ -89,6 +102,12 @@ a.active {
   float:right;
 }
 
+.contact {
+  font-size:1em;
+  font-family: 'Quicksand', sans-serif;
+  color:black;
+}
+}
 
 .image {
   transition: .7s;
@@ -103,9 +122,9 @@ a.active {
 
 /* relevant styles */
 .img__wrap {
-  display:block;
+  display:inline-block;
   position: relative;
-  height: 50.5%;
+  height: 100%;
   width: 100%;
 }
 
@@ -120,7 +139,9 @@ a.active {
   visibility: hidden;
   opacity: 0;
   transition: opacity .5s, visibility .4s;
-  text-align:center;
+  text-align: center;
+  height: 100%;
+  width: 100%
 }
 
 .text {
@@ -128,6 +149,10 @@ a.active {
   text-align:center;
 }
 
+textarea {
+  background-color:white;
+  width:6vw;
+}
 
 .img__wrap:hover .img__description {
   visibility: visible;
@@ -154,60 +179,88 @@ a.active {
   visibility: visible;
 }
 
+.banner {
+  margin-top:60px;
+}
 
+/* default aka mobile view */
 h1 {font-size:3em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   letter-spacing: 1px;
-  line-height: %;
+
 }
 
-h2 {font-size:30px;
+h2 {font-size:1.5em; 
+  font-family: 'Montserrat', sans-serif;
+  color:#005099;
+  margin-bottom:2%;
+  font-weight:2px;
+
+}
+
+h3 {font-size:21px;
   font-family: 'Quicksand', sans-serif;
   color:black;
 }
 
-h3 {font-size:5vw;
-  font-family: 'Quicksand', sans-serif;
-  color:black;
-  line-height: 3vh;
-}
-
-p {font-size:20px;
+p {font-size:1em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   line-height:35px;
-  margin-top:3%;
+  margin-bottom:5%;
 
 }
 
-h4 {font-size:13px;
-  font-family: 'Quicksand', sans-serif;
+h4 {font-size:1.2em;
+  font-family: 'Montserrat', sans-serif;
   color:black;
+  text-decoration: bold;
+}
+
+h5 {font-size:1.2em;
+  font-family: 'Montserrat', sans-serif;
+  color:#9e9e9e;
+  text-decoration: bold;
+}
+
+h6 {font-size:.8em;
+  font-family: 'Montserrat', sans-serif;
+  color:grey;
+  font-weight:.5;
+  line-height: -3em;
+  margin-bottom: .5em;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 #top {margin-top:30px;
 }
 
+
 .projects {
-  margin-right:10%;
-  margin-left:10%;
+  margin-right:5%;
+  margin-left:5%;
 }
 
-  .column{
-    float:left;
+.column{
     width:100%;
-    margin-top:-6px;
     position:relative;
-}
+    margin-bottom:2em;
+  }
 
-.column2{
-    float:left;
-    width:49%;
-    margin:2px;
-    top:-2px;
-
-}
+.column-project{
+    width:100%;
+    position:relative;
+    margin-bottom:2em;
+  }
 
 .column3{
     position:relative;
@@ -216,13 +269,10 @@ h4 {font-size:13px;
 }
 
 
-
-.footer {
-  padding-bottom: 50%;
-  z-index: 100;
-
+.resize {
+  margin-left:0%;
+  margin-right:0%;
 }
-
 
 
 
@@ -261,9 +311,9 @@ transition: 0.5s;
   left: 150px;
 }
 
-
-
-@media screen and (min-width:500px) {
+/* _____________________________________________________________________DIVIDER ___________________________________________*/
+/* FOR MOBILE */
+@media screen and (min-width:400px) {
   .column{
     float:left;
     width:100%;
@@ -277,27 +327,36 @@ transition: 0.5s;
     width:33.333%;
 }
 
+
 h1 {font-size:5em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   letter-spacing: 1px;
 }
 
-h3 {font-size:3vw;
+
+h3 {font-size:2em;
   font-family: 'Quicksand', sans-serif;
   color:black;
-  line-height:3vh;
 }
 }
 
-
-@media screen and (min-width:750px) {
+/* FOR MOBILE */
+@media screen and (min-width:600px) {
   .column{
     float:left;
     width:100%;
     margin-top:-6px;
     position:relative;
 }
+
+.column-project{
+    width:48%;
+    float:left;
+    position:relative;
+    margin-left:5px;
+    margin-bottom:2em;
+  }
 
 .column3{
     position:relative;
@@ -311,72 +370,76 @@ h1 {font-size:5em;
   letter-spacing: 1px;
 }
 
-h3 {font-size:4vw;
+h3 {font-size:2em;
+  font-family: 'Quicksand', sans-serif;
+  color:black;
+}
+}
+
+
+/* FOR IPAD/DESKTOP*/
+
+@media screen and (min-width:800px) {
+  .column{
+    float:left;
+    width:48%;
+    margin:1%;
+    position:relative;
+}
+
+.column3{
+    position:relative;
+    float:left;
+    width:33.333%;
+}
+
+.column-project{
+    width:48%;
+    float:left;
+    position:relative;
+    margin-left:5px;
+    margin-bottom:2em;
+  }
+
+
+.intro {
+  margin-left:20%;
+  margin-right:20%;
+  text-align:left;
+  margin-top:20%;
+  margin-bottom:10%;
+}
+.intro2 {
+  margin-left:25%;
+  margin-right:25%;
+  text-align:left;
+  margin-top:5%;
+  margin-bottom:15%;
+}
+.projects {
+  margin-right:10%;
+  margin-left:10%;
+}
+
+
+h1 {font-size:5em;
+  font-family: 'Quicksand', sans-serif;
+  color:black;
+  letter-spacing: 1px;
+}
+
+h3 {font-size:2em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   line-height:5vh;
 }
 }
 
-@media screen and (min-width:900px) {
-  .column{
-    float:left;
-    width:50%;
-    margin-top:-6px;
-    position:relative;
-}
-
-.column3{
-    position:relative;
-    float:left;
-    width:33.333%;
-}
-
-h1 {font-size:5em;
-  font-family: 'Quicksand', sans-serif;
-  color:black;
-  letter-spacing: 1px;
-}
-
-h3 {font-size:2.5vw;
-  font-family: 'Quicksand', sans-serif;
-  color:black;
-  line-height:3vh;
-}
-}
-
-@media screen and (min-width:950px) {
-  .column{
-    float:left;
-    width:50%;
-    margin-top:-6px;
-    position:relative;
-}
-
-.column3{
-    position:relative;
-    float:left;
-    width:33.333%;
-}
-
-h1 {font-size:5em;
-  font-family: 'Quicksand', sans-serif;
-  color:black;
-  letter-spacing: 1px;
-}
-
-h3 {font-size:2vw;
-  font-family: 'Quicksand', sans-serif;
-  color:black;
-  line-height:2vh;
-}
-}
 
 @media screen and (min-width:1000px) {
   .column{
-    float:left;
-    width:50%;
-    margin-top:-6px;
+    width:48%;
+    margin:1%;
     position:relative;
 }
 
@@ -386,16 +449,52 @@ h3 {font-size:2vw;
     width:33.333%;
 }
 
+.column-project{
+    width:48%;
+    float:left;
+    position:relative;
+    margin-left:5px;
+    margin-bottom:2em;
+  }
+
+
+.intro {
+  margin-left:20%;
+  margin-right:20%;
+  text-align:left;
+  margin-top:20%;
+  margin-bottom:10%;
+}
+.intro2 {
+  margin-left:25%;
+  margin-right:25%;
+  text-align:left;
+  margin-top:5%;
+  margin-bottom:15%;
+}
+.projects {
+  margin-right:15%;
+  margin-left:15%;
+}
+
+.about {
+  margin-left:25%;
+  margin-right:25%;
+  text-align:left;
+  margin-top:10%;
+  margin-bottom:3%;
+}
+
+
 h1 {font-size:5em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   letter-spacing: 1px;
 }
 
-h3 {font-size:2vw;
+h3 {font-size:2em;
   font-family: 'Quicksand', sans-serif;
   color:black;
   line-height:5vh;
 }
 }
-
